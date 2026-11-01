@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" viewBox="0 0 560 340" role="img" aria-label="GitHub metrics panel — generating">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1016"/>
+      <stop offset="55%" stop-color="#0d1420"/>
+      <stop offset="100%" stop-color="#101a28"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="55%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#7dd3fc" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="card"><rect width="560" height="340" rx="14"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="560" height="340" fill="url(#bg)"/>
+    <rect width="560" height="340" fill="url(#grid)"/>
+    <ellipse cx="440" cy="300" rx="220" ry="150" fill="url(#glow)"/>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+      <text x="32" y="52" fill="#8b98a8" font-size="12.5" letter-spacing="1.4">OVERVIEW PANEL</text>
+      <text x="32" y="92" fill="#e6edf3" font-size="21">Generating on first run</text>
+      <text x="32" y="122" fill="#8b98a8" font-size="13">Built inside this repo, nightly at 03:00 SAST.</text>
+      <text x="32" y="144" fill="#5a6673" font-size="13">No third-party service to go down.</text>
+    </g>
+
+    <!-- skeleton rows -->
+    <g fill="#182434">
+      <rect x="32" y="182" width="300" height="12" rx="6"/>
+      <rect x="32" y="208" width="240" height="12" rx="6"/>
+      <rect x="32" y="234" width="276" height="12" rx="6"/>
+      <rect x="32" y="260" width="192" height="12" rx="6"/>
+    </g>
+    <g fill="url(#accent)" opacity="0.55">
+      <rect x="32" y="182" width="118" height="12" rx="6"/>
+      <rect x="32" y="208" width="84" height="12" rx="6"/>
+      <rect x="32" y="234" width="146" height="12" rx="6"/>
+      <rect x="32" y="260" width="62" height="12" rx="6"/>
+    </g>
+
+    <rect x="32" y="300" width="160" height="2.5" rx="1.25" fill="url(#accent)" opacity="0.8"/>
+  </g>
+  <rect x="0.5" y="0.5" width="559" height="339" rx="14" fill="none" stroke="#21262d"/>
+</svg>

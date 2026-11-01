@@ -13,11 +13,18 @@ permissions:
 jobs:
   metrics:
     runs-on: ubuntu-latest
+    env:
+      # Job-level env so step `if:` can gate on it; the `secrets` context is
+      # not available in a step `if:`. Without the PAT the panels stay as the
+      # committed placeholders instead of failing the run.
+      HAS_METRICS_TOKEN: ${{ secrets.METRICS_TOKEN != '' }}
     steps:
       - name: Overview panel
+        if: env.HAS_METRICS_TOKEN == 'true'
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: L33B0mb
           filename: assets/metrics.svg
           template: classic
@@ -34,9 +41,11 @@ jobs:
           plugin_languages_indepth: no
 
       - name: Contribution calendar
+        if: env.HAS_METRICS_TOKEN == 'true'
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: L33B0mb
           filename: assets/metrics-calendar.svg
           template: classic
